@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">CLOCK</h1>
+        
+        <div class="reloj-contenedor">
+             Reloj analógico 
+            <div class="reloj">
+                <canvas id="relojCanvas" width="400" height="400"></canvas>
+            </div>
+            
+             Display digital 
+            <div class="display-digital">
+                <span id="displayTiempo">12:00:00</span>
+            </div>
+            
+             Controles 
+            <div class="controles">
+                <button id="btnSincronizar" class="btn btn-primary">
+                     Sincronizar con Sistema
+                </button>
+                <button id="btnAjustar" class="btn btn-secondary">
+                     Ajustar Hora
+                </button>
+            </div>
+        </div>
+        
+         
+        <div id="modalAjustar" class="modal">
+            <div class="modal-contenido">
+                <h2>Ajustar Hora</h2>
+                <div class="form-grupo">
+                    <label for="inputHoras">Horas (1-12):</label>
+                    <input type="number" id="inputHoras" min="1" max="12" value="12">
+                </div>
+                <div class="form-grupo">
+                    <label for="inputMinutos">Minutos (0-59):</label>
+                    <input type="number" id="inputMinutos" min="0" max="59" value="0">
+                </div>
+                <div class="form-grupo">
+                    <label for="inputSegundos">Segundos (0-59):</label>
+                    <input type="number" id="inputSegundos" min="0" max="59" value="0">
+                </div>
+                <div class="modal-botones">
+                    <button id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    <button id="btnCancelar" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
